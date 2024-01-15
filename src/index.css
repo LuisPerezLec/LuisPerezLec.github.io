@@ -112,11 +112,10 @@
 
 .hero-background {
   background-color: #e5e5f7;
-  opacity: 0.8;
-  background-image:  linear-gradient(135deg, #444cf7 25%, transparent 25%), linear-gradient(225deg, #444cf7 25%, transparent 25%), linear-gradient(45deg, #444cf7 25%, transparent 25%), linear-gradient(315deg, #444cf7 25%, #e5e5f7 25%);
-  background-position:  25px 0, 25px 0, 0 0, 0 0;
-  background-size: 25px 25px;
-  background-repeat: repeat;
+  opacity: 1;
+  background-image:  linear-gradient(30deg, #000000 12%, transparent 12.5%, transparent 87%, #000000 87.5%, #000000), linear-gradient(150deg, #000000 12%, transparent 12.5%, transparent 87%, #000000 87.5%, #000000), linear-gradient(30deg, #000000 12%, transparent 12.5%, transparent 87%, #000000 87.5%, #000000), linear-gradient(150deg, #000000 12%, transparent 12.5%, transparent 87%, #000000 87.5%, #000000), linear-gradient(60deg, #00000077 25%, transparent 25.5%, transparent 75%, #00000077 75%, #00000077), linear-gradient(60deg, #00000077 25%, transparent 25.5%, transparent 75%, #00000077 75%, #00000077);
+  background-size: 62px 109px;
+  background-position: 0 0, 0 0, 31px 54px, 31px 54px, 0 0, 31px 54px;
 }
 
 .feature-card:hover {
