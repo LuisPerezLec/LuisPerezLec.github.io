@@ -1,21 +1,21 @@
 import React from 'react'
-import Luis from '../assets/Luis.png'
 import styles from '../styles'
+import Texto from './Texto'
+import MainCard from './MainCard'
+import LinkedInButton from './LinkedInButton'
+import DownloadCVButton from './DownloadCVButton'
 
 const Hero = () => {
   return (
-    <div className={`bg-slateBlue1 flex md:flex-row flex-col md:${styles.paddingY+ ' ' +styles.flexCenter}  py-16`}>
-      <div className={`hero-background bg-slateBlue1 hover:bg-slateBlue2 rounded-full w-[80%] xs:w-[440px] p-8 transition-all
-          ${{/*Next 3 make the bright blue light on hover*/}} hover:shadow-2xl hover:shadow-sky-400 transition-shadow
-          `}>
-        <div>
-          <div className={`flex justify-center items-center`}>
-            <img src={Luis} className="rounded-full" width={400}/>
-          </div>
-        </div>
-        <div></div>
+    <div className={`bg:white dark:bg-slateBlue1 md:flex-row flex-col md:${styles.paddingY+ ' ' +styles.flexCenter}  py-16`}>
+      <div className={`${styles.flexCenter} md:w-1/2`}>
+        <MainCard />
       </div>
-      <div>Luis Ernesto Pérez Lechuga</div>
+      <div className={`md:w-1/2`}>
+        <Texto/>
+        <LinkedInButton />
+        <DownloadCVButton />
+      </div>
     </div>
   )
 }
