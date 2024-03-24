@@ -1,0 +1,67 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Badge from "../components/Badge.astro";
+import LinkedIn from '../components/icons/LinkedIn.astro'
+import Social from '../components/Social.astro'
+import GitHub from "../components/icons/GitHub.astro";
+import Mail from '../components/icons/Mail.astro'
+import Experience from '../components/Experience.astro'
+import Projects from '../components/Projects.astro'
+import SectionContainer from '../components/SectionContainer.astro'
+import Briefcase from '../components/icons/Briefcase.astro'
+import Code from '../components/icons/Code.astro'
+---
+
+<Layout title="Luis Pérez | Portafolio - Desarrollador y Programador"
+description="Contrata a Luis Ernesto, desarrollador web."
+>
+	<main class="px-4">
+		<SectionContainer class="py-44 pb-32">
+			<img src="./yo.webp" alt="Luis Picture" class="rounded-full items-center size-32 mb-4 bg-yellow-200"/>
+			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
+				Hola, soy Luis <a
+						href="https://www.linkedin.com/in/luis-ernesto-p%C3%A9rez-lechuga-a0a1531b7/"
+						target="_blank"
+						rel="noopener"
+						class="flex justify-center items-center"
+					>
+					<div class="flex justify-center items-center">
+						<Badge>Disponible para trabajar</Badge>
+					</div></a>
+			</h1>
+			<h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]">
+				<span class="text-yellow-200/90">Desarrollador Fullstack</span>. De Aguascalientes, México, especializado en
+				desarrollo web
+			</h2>
+			<nav class="flex gap-4 mt-8 flex-wrap">
+				<Social href="https://www.linkedin.com/in/luis-ernesto-p%C3%A9rez-lechuga-a0a1531b7/">
+					<LinkedIn class="size-4 lg:size-6"/>
+					LinkedIn
+				</Social>
+				<Social href="https://github.com/LuisPerezLec">
+					<GitHub class="size-4 lg:size-6"/>
+					GitHub
+				</Social>
+				<Social href="mailto:up200966@alumnos.upa.edu.mx">
+					<Mail class="size-4 lg:size-6"/>
+					up200966@alumnos.upa.edu.mx
+				</Social>
+			</nav>
+		</SectionContainer>
+		<SectionContainer id="experience">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Briefcase class="size-7"/>
+				Experiencia laboral
+			</h2>
+			<Experience />
+		</SectionContainer>
+		<SectionContainer id="projects">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Code class="size-7"/>
+				Proyectos
+			</h2>
+			<Projects />
+		</SectionContainer>
+	</main>
+</Layout>

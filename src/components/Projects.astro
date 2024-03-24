@@ -1,0 +1,34 @@
+---
+  import RightArrow from './icons/RightArrow.astro'
+  const projects = [
+    {
+      title: 'Code Challenge Lab',
+      description: 'Code Challenge Lab, es una Single Page Application cuyo objetivo es servir como una plataforma en la cuál los usuarios pueden encontrar información relevante sobre el diseño, desarrollo e implementación de algoritmos, y llevar un seguimiento de su progreso. La plataforma no posee contenido ni está desplegada, pero es un proyecto bastante completo. Está desarrollado con React para el frontend, Express para el backend, y tiene una base de datos no relacional desarrollada en MongoDB y desplegada en Atlas.',
+      link: '#',
+      github: '#',
+      image: './project.webp',
+      tags: ['HTML', 'CSS', 'JavaScript', 'Typescript', 'React', 'Tailwind CSS', 'Nodejs', 'Express', 'MongoDb' ],
+      RightArrow: RightArrow
+    }
+  ]
+---
+
+{
+  projects.map(({title, description, tags, image}) => (
+    <article>
+      <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex flex-wrap gap-2 flex-row mb-2">
+        {tags.map(tag => (
+          <li>
+            <span class="flex gap-x-2 rounded-full text-xs py-1 px-2 bg-zinc-900 hover:bg-zinc-800 hover:scale-125 transition">
+              <RightArrow class="size-4" />
+              {tag}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <img class="rounded shadow-2xl shadow-white/15" src={image} alt="Captura de pantalla del proyecto">
+    </article>
+  ))
+}

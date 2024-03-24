@@ -1,0 +1,33 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+
+const experience = [
+  {
+    date: 'Noviembre 2023',
+    title: 'Full Stack Developer en QMC',
+    description: 'Trabajé como desarrollador full stack en una plataforma de la empresa, fui responsable de hacer consultas para recuperar información de base de datos, el desarrollo de interfaces frontend con Bootstrap 4 y jQuery, y el desarrollo de rutas backend con NodeJs y Express',
+  },
+  {
+    date: 'Enero 2021',
+    title: 'Full Stack Developer en Universidad Politecnica de Aguascalientes (UPA)',
+    description: 'Trabajé como desarrollador full stack en un módulo universitario centrado en la publicación de las nuevas ofertas de empleo. Trabajé con NodeJs y Express, y también implementé bases de datos no relacionales con MongoDB',
+  },
+  {
+    date: 'Septiembre 2019',
+    title: 'Asistente de área de IT en Universidad Politecnica de Aguascalientes (UPA)',
+    description: 'Colaboré como asistente del área de informática, haciendo mantenimiento y administrando redes en la universidad.',
+    /* link: "#" */
+  }
+]
+---
+
+
+<ol class="relative border-s border-gray-200 ml-3">         
+  {
+    experience.map(exp => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...exp} />
+      </li>
+    ))
+  }
+</ol>
